@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-wrapper">
+            <div class="carousel-slide">
+                <img src="https://play-lh.googleusercontent.com/Caqok0xxPfrW8EZ-msHC91AD9SfgTWsW-UM827KWrW8h8BoTHW_-qlCkzbeYr9_GW30" alt="Slide 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://cgpacalculators.com/wp-content/uploads/2024/03/CGPA-to-PercentageCalculator-Online.webp" alt="Slide 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://play-lh.googleusercontent.com/Qpn2tMS02i2KMX9uDaQtmf0dOHDN2Rv8BcaMNoPmD4w0eyG4RNJeDQ06vPWwuAcOQl-5" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <button id="openModal" class="btn btn-primary">Open CGPA Calculator</button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>CGPA Calculator</h2>
+            <div class="form-section">
+                <label for="num-semesters">Enter the number of Semesters:</label>
+                <input type="number" id="num-semesters" min="1" onchange="generateSemesterInputs()" placeholder="Enter number of semesters">
+
+                <div id="semesters-inputs"></div>
+                <button class="btn btn-submit" onclick="calculateCGPA()">Calculate CGPA</button>
+                <div id="cgpa-result" class="result-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
